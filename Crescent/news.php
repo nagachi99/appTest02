@@ -6,7 +6,7 @@ require_once(dirname(__FILE__) . '/util.inc.php');
 require_once(dirname(__FILE__) . '/Models/News.php');
 
 const NUM_NEWS = 5;
-const IMAGE_PATH = 'images/press/';
+const IMG_PATH = 'images/press/';
 $news = (new News())->all('desc', 0, NUM_NEWS);
 
 ?>
@@ -76,7 +76,7 @@ $news = (new News())->all('desc', 0, NUM_NEWS);
                     <div class="well well-lg">
                         <div class="media">
                             <a class="pull-left">
-                            <img src="<?=IMAGE_PATH . ($item['image'] ?: 'press.jpg') ?>" width="64">
+                            <img src="<?=IMG_PATH . ($item['image'] ?: 'press.jpg') ?>" width="64">
 
                             </a>
                             <div class="media-body">

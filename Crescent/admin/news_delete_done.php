@@ -1,3 +1,12 @@
+<?php
+
+declare(strict_types=1);
+session_start();
+require_once dirname(__FILE__) . '/auth.inc.php';
+authConfirm();
+
+require_once dirname(__FILE__) . '/../util.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,10 +20,7 @@
     <header>
         <div class="inner">
             <span><a href="index.php">Crescent Shoes 管理</a></span>
-            <div id="account">
-                admin
-                [ <a href="logout.php">ログアウト</a> ]
-            </div>
+            <?php include dirname(__FILE__) . '/account.parts.php'; ?>
         </div>
     </header>
     <div id="container">
