@@ -24,6 +24,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/books/{book}',   [BooksController::class, 'destroy']);
 });
 
+Route::resource('items', 'ItemsController');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

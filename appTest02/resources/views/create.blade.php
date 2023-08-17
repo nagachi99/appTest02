@@ -11,6 +11,8 @@
 
         @include('common.errors')
 
+        <input type='hidden' name='user_id' value="{{ Auth::user()->id }}">
+
         <div class="form-group col-md-6 col-xs-12">
             <div class="input-group mb-4">
                 <div class="input-group-prepend">
@@ -26,11 +28,10 @@
                 </div>
                 <select class="custom-select form-control" name="item_purchase">
                     <option>選択してください</option>
-                    @for ($i = 1; $i <= 10; $i++)
-                        <option value="{{ $i }}" {{ old('item_purchase') == $i ? 'selected' : '' }}>
-                            {{ $i }}冊</option>
+                    @for($i=1; $i<=10; $i++)
+                      <option value="{{ $i }}" {{ old('item_purchase') == $i ? 'selected' : '' }}>{{ $i }}冊</option>
                     @endfor
-                </select>
+                  </select>
             </div>
         </div>
         <div class="form-group col-md-6 col-xs-12">
@@ -38,8 +39,7 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fa fa-money"></i>　料　金</div>
                 </div>
-                <input type="number" name="item_amount" class="form-control" placeholder="例：3000"
-                    value="{{ old('item_amount') }}">
+                <input type="number" name="item_amount" class="form-control" placeholder="例：3000" value="{{ old('item_amount') }}">
             </div>
         </div>
         <div class="form-group col-md-6 col-xs-12">
@@ -47,9 +47,7 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fa fa-calendar-o"></i>　販売日</div>
                 </div>
-                <input type="datetime-local" name="published" class="form-control datetimepicker-input"
-                    value="{{ old('published') }}" id="datetimepicker" data-toggle="datetimepicker"
-                    data-target="#datetimepicker">
+                <input type="datetime-local" name="published" class="form-control datetimepicker-input" value="{{ old('published') }}" id="datetimepicker" data-toggle="datetimepicker" data-target="#datetimepicker">
             </div>
         </div>
         <div class="form-group col-3">

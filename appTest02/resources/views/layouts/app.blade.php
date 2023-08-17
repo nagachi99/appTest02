@@ -36,6 +36,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/books"><i class="fa fa-plus"></i> 新規追加</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact"><i class="fa fa-wpforms"></i> お問い合わせ</a>
+                            </li>
                         </ul>
                         <ul class="navbar-nav ms-auto">
                             <!-- 一般ユーザ -->

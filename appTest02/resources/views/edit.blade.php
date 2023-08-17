@@ -12,6 +12,8 @@
 
         @include('common.errors')
 
+        <input type='hidden' name='user_id' value="{{ Auth::user()->id }}">
+
         <div class="form-group col-md-6 col-xs-12">
             <div class="input-group mb-4">
                 <div class="input-group-prepend">

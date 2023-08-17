@@ -16,7 +16,7 @@ class BooksTableSeeder extends Seeder
     public function run()
     {
         // 出力件数を指定
-        $NUM_FAKER = 60; // データ件数を増やす
+        $NUM_FAKER = 60;
         // Factoryインスタンスを生成
         $faker = Factory::create('ja_JP');
         // 本のタイトルのみ英語名なので日本語で定義
@@ -46,7 +46,7 @@ class BooksTableSeeder extends Seeder
                 'item_purchase' => $faker->numberBetween(1, 10),
                 // 1000~4000までの料金
                 'item_amount' => $faker->numberBetween(10, 40) . '00',
-                'user_id'    => $faker->numberBetween(1,5),
+                'user_id'     => $faker->numberBetween(1,5),
                 'published'  => $faker->dateTimeBetween('-3 years', 'now'),
                 'created_at' => $faker->dateTime('now'),
                 'updated_at' => $faker->dateTime('now'),
