@@ -97,7 +97,7 @@ return [
 
     'custom' => [
         'attribute-name' => [
-            'rule-name ' => 'custom-message',
+            'rule-name' => 'custom-message',
         ],
     ],
 
@@ -113,15 +113,14 @@ return [
     */
 
     'attributes' => [
-        'item_name'     => '書籍名',
+        'item_name' => '書籍名',
         'item_purchase' => '購入数',
-        'item_amount'   => '料金',
-        'published'     => '販売日',
-        'name'          => 'お名前',
-        'email'         => 'メールアドレス',
-        'title'         => 'タイトル',
-        'body'          => '本文'
-
+        'item_amount' => '料金',
+        'published' => '販売日',
+        'name' => 'お名前',
+        'email' => 'メールアドレス',
+        'title' => 'タイトル',
+        'body' => '本文'
     ],
 
 ];

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\BooksController;
 
+const CONTACT_PATH = App\Http\Controllers\ContactsController::class;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,5 +29,10 @@ Route::group(['middleware' => 'auth'], function () {
 Route::resource('items', 'ItemsController');
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get( '/contact',         [CONTACT_PATH, 'show']    )->name('contact.show');
+Route::post('/contact',         [CONTACT_PATH, 'post']    )->name('contact.post');
+Route::get( '/contact/confirm', [CONTACT_PATH, 'confirm'] )->name('contact.confirm');
+Route::post('/contact/confirm', [CONTACT_PATH, 'send']    )->name('contact.send');
+Route::get( '/contact/done',    [CONTACT_PATH, 'done']    )->name('contact.done');

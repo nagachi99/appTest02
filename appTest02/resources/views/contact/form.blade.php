@@ -16,7 +16,8 @@
             <div class="input-group mb-4">
                 <div class="input-group">
                     <div class="input-group-text"><i class="fa fa-id-card-o"></i>　お名前</div>
-                    <input type="text" name="name" class="form-control bg-light" value="{{ old('name', isset($input->name) ? $input->name : '') }}" autofocus>
+                    <input type="text" name="name" class="form-control bg-light"
+                        value="{{ old('name', isset($input->name) ? $input->name : '') }}" autofocus>
                 </div>
             </div>
         </div>
@@ -24,7 +25,8 @@
             <div class="input-group mb-4">
                 <div class="input-group">
                     <div class="input-group-text"><i class="fa fa-envelope"></i>　メールアドレス</div>
-                    <input type="text" name="email" class="form-control" value="{{ old('email', isset($input->email) ? $input->email : '') }}">
+                    <input type="text" name="email" class="form-control"
+                        value="{{ old('email', isset($input->email) ? $input->email : '') }}">
                 </div>
             </div>
         </div>
@@ -32,7 +34,8 @@
             <div class="input-group mb-4">
                 <div class="input-group">
                     <div class="input-group-text"><i class="fa fa-indent"></i>　タイトル</div>
-                    <input type="text" name="title" class="form-control" value="{{ old('title', isset($input->title) ? $input->title : '') }}">
+                    <input type="text" name="title" class="form-control"
+                        value="{{ old('title', isset($input->title) ? $input->title : '') }}">
                 </div>
             </div>
         </div>

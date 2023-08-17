@@ -5,23 +5,23 @@
 <table style="border-collapse:collapse;border:1px solid #ccc;width:100%">
     <tr>
         <th style="text-align:left;padding:20px;border:1px solid #ccc">お名前</th>
-        <td style="padding:20px;border:1px solid #ccc">[お名前を表示]</td>
+        <td style="padding:20px;border:1px solid #ccc">{{ $input['name'] }}</td>
     </tr>
     <tr>
         <th style="text-align:left;padding:20px;border:1px solid #ccc">メールアドレス</th>
-        <td style="padding:20px;border:1px solid #ccc">[メールアドレスを表示]</td>
+        <td style="padding:20px;border:1px solid #ccc">{{ $input['email'] }}</td>
     </tr>
     <tr>
         <th style="text-align:left;padding:20px;border:1px solid #ccc">タイトル</th>
-        <td style="padding:20px;border:1px solid #ccc">[タイトルを表示]</td>
+        <td style="padding:20px;border:1px solid #ccc">{{ $input['title'] }}</td>
     </tr>
     <tr>
         <th style="text-align:left;padding:20px;border:1px solid #ccc">本文</th>
-        <td style="padding:20px;border:1px solid #ccc">[本文を表示]</td>
+        <td style="padding:20px;border:1px solid #ccc">{{ $input['body'] }}</td>
     </tr>
 </table>
 <p style="line-height:3">
-  お客様にお送り頂いたフォームは無事送信されました。<br>
-  お送りいただきました内容を確認の上、
-  担当者より折り返しご連絡させていただきます。
+    お客様にお送り頂いたフォームは無事送信されました。<br>
+    お送りいただきました内容を確認の上、
+    担当者より折り返しご連絡させていただきます。
 </p>

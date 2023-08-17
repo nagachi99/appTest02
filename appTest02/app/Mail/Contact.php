@@ -13,12 +13,14 @@ class Contact extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $form_input;
+
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($input)
     {
-        //
+        $this->form_input = $input;
     }
 
     /**
@@ -34,13 +36,12 @@ class Contact extends Mailable
     /**
      * Get the message content definition.
      */
-    public function content()
+    public function content(): Content
     {
-        // viewプロパティで本文をコンテンツクラスの初期値に渡す
         return new Content(
             view: 'contact.mailBody',
-            with: ['input' => $this->form_input],
-          );
+            with: ['input' => $this->form_input]
+        );
     }
 
     /**
